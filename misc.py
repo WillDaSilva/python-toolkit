@@ -1,4 +1,4 @@
-from math import factorial, sqrt, gcd
+from math import gcd
 from operator import mul
 import heapq
 from functools import reduce
@@ -9,16 +9,6 @@ from .prime import primeFactor
 def product(iterable):
     ''' The product of the items in n '''
     return reduce(mul, iterable)
-
-def nPr(n, r):
-    ''' The number of ordered permutations of r items taken from a population of size n '''
-    assert 0 <= r <= n
-    return product(range(n + 1 - r, n + 1))
-
-def nCr(n, r):
-    ''' The number of unordered combinations of r items from a population of size n '''
-    assert 0 <= r <= n
-    return nPr(n, r) // factorial(r)
 
 def lcm(a, b):
     return a * b // gcd(a, b)
@@ -40,12 +30,6 @@ def factor(n):
             # d == d // primes[0][0]
             if i > 0 and a == 1:
                 heapq.heappush(q, (d // primes[i][0] * primes[i + 1][0], i + 1, 1))
-
-
-# def factor(n):
-#     primes, ranges = zip(*primeFactor(n))
-#     z = it.product(*(range(x + 1) for x in ranges))
-#     yield from (product(a ** b for a, b in zip(primes, q)) for q in z)
 
 def numFactor(n):
     ''' The number of factors of n '''
@@ -214,4 +198,3 @@ def reverseInt(n):
         r += n % 10
         n //= 10
     return r
-
