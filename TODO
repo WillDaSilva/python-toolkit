@@ -1,0 +1,17 @@
+Make trees.py
+    Tree iterators: (Iterative methods only!)
+        breadth-first traversal
+        pre-order traversal
+        in-order traversal
+        post-order traversal
+    Parameters:
+        tree
+        func: called on each node
+        exitValue: causes iteration to stop if func(node) == exitValue
+                   if func == None, causes iteration to stop if node == exitValue
+
+Profile reverseInt() to check if it's faster than int(''.join(reversed(str())))
+
+Update all docstrings
+
+Create function in combinatorics which generates A-restricted compositions
