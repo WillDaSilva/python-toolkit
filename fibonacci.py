@@ -2,7 +2,7 @@ from math import sqrt
 
 def fib():
     ''' Generates fibonacci number '''
-    a, b = (0, 1)
+    a, b = 0, 1
     while True:
         yield a
         a, b = b, a + b
