@@ -7,3 +7,4 @@ from .misc import product, gcd, lcm, factor, numFactor, flatten, tail, consume,\
                   isPalindrome, reverseInt
 from .pandigital import pan, isPan
 from .prime import prime, isPrime, primeFactor
+from .binaryTree import BinaryTree
